@@ -1,7 +1,7 @@
 # Unsupervised Learning - Final Exam
 ## Big Data and Sufficient Statistics
 Turn Big Data into Small Data:
-* reducing column count (pea, factor analysis, etc.)
+* reducing column count (pca, factor analysis, etc.)
 * reducing row count (mean, variance, correlation coefficient, cluster analysis) 
 
 Nonparametric data problems
