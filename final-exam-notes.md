@@ -29,7 +29,7 @@ Factorization Theorem:
 ## Principal Components Analysis Part 2
 * Thus the total variance = p if the variables have been standardized.
 * Rules that have been proposed for discarding PRINs:
-[image:2ECF83AF-E49C-4310-AAF6-9D3E00E6CDF6-4184-0000431DA84649F2/Screen Shot 2022-03-08 at 11.41.08 PM.png]
+![](Screen%20Shot%202022-03-08%20at%2011.41.08%20PM.png)
 
 * the eigenvalue for each PRIN is the variance of the PRIN
 	* sum of eigenvalues = total variance
@@ -76,7 +76,7 @@ Factorization Theorem:
 	* correlation measures for similarities are seldom used in practice
 * distance measures (dissimilarities) 
 	* common distance measures:
-[image:3F19B413-7452-4F25-A9FB-36F0B30FD5A3-4184-000048C555BBA008/Screen Shot 2022-03-09 at 12.20.51 PM.png]
+![](Screen%20Shot%202022-03-09%20at%2012.20.51%20PM.png)
 	* for Euclidean distance, you don’t need to take the square root because sum of squares is easy enough
 	* mahalanobis distance generalizes the Euclidean distance to adjust for different variances and correlations between the variables
 		* mahalanobis and euclidean distances are the same if the variables are uncorrelated and have the same variance 
@@ -94,7 +94,7 @@ Factorization Theorem:
 * degree of relatedness of two cases is indicated by their most recent common ancestor
 * common hierarchical agglomerative methods
 	* single linkage (nearest neighbor) 
-		* uses the similarity (or least dissimilarity) between the entity and /any/ member of the cluster
+		* uses the similarity (or least dissimilarity) between the entity and _any_ member of the cluster
 	* complete linkage (farthest neighbor) 
 		* like single linkage, except that similarity is the distance between the farthest members of the two entities. 
 		* a joining entity must be close to all members of the entity to be joined
@@ -199,7 +199,7 @@ Factorization Theorem:
 * structure matrix is a table of correlations between manifest variables and common factors
 * The correlation between a manifest variable and a common factor is the slope of the regression of the manifest variable and the common factor
 * The factorial determination of the variables is the degree to which the observed variables are determined by the common factors and can be measured by the average communality:
-[image:4EAC581D-5E1A-47C4-A583-4BA0EA69C31C-4184-00002DDABD2585C9/Screen Shot 2022-03-08 at 2.13.46 PM.png]
+![](Screen%20Shot%202022-03-08%20at%202.13.46%20PM.png)
 * Cannot test whether the FA model applies
 	* appropriateness of the FA model can never be proven
 	* the number of factors can never be known
@@ -294,5 +294,19 @@ Factorization Theorem:
 * the special case of factoring and no uniqueness shows that the estimation of factor scores is feasible 
 	* only requires knowing the eigenvalues of the correlation matrix (lambda i) and the estimated factor coefficients (lambda ij) from least squares estimation
 
+## Notes from Quizzes
+* The R-square between a manifest variable and its unique factor is the uniqueness of the manifest = 1 - (0.8) * (0.8) = 0.36. Since the R-square is the square of the correlation, then correlation = sqrt(0.36) = 0.6.
+* PCA coefficient = correlation / sqrt(eigenvalue of component)
+* The original variables are standardized, but variance of component = eigenvalue of component.
+* The correlation between manifest variables is the inner product of their factor coefficient vectors = (0.8) * (0.6) = 0.48.
+* varimax, equamax, and quartimax are orthonormal transformations
+* The correct formula for slope is b = corrr(Y,X) stdev(Y) / stdev(X).
+* At the root, there is only one cluster, so there is no between SS, and BSS = 0, so R-square = 0.
+* WSS measures within-cluster variability - how far the data in one cluster are from the cluster centroid + the same measure for all other clusters.  
+* Ward’s method joins the two clusters that result in the least increase in WSS (the “error” SS). Since BSS + WSS = TSS (a constant throughout all steps), then BSS must also change (decrease) the least.
+* There is only one PCA for two variables,
+* PCA: The order of importance is in the order of the magnitudes of the coefficients (or correlation coefficients, since coefficients and correlations are proportional to each other.)
+* The square root is a one-to-one function of its positive argument and so has the same information as the radicand (which is sufficient), and so is sufficient as well.
+* Z1 is standardized. So its standard deviation is 1. Hence, its variance is 1.
 
 #unsupervised-learning
